@@ -39,7 +39,7 @@ export function Hero({ pronto }: { pronto: boolean }) {
   const escalaFoto = useTransform(scrollYProgress, [0, 1], [1, 1.12])
   const mx = useSpring(useMotionValue(0), molas.suave)
   const my = useSpring(useMotionValue(0), molas.suave)
-  const equipe = foto(1)
+  const equipe = foto(10)
 
   const mover = (e: PointerEvent<HTMLElement>) => {
     if (e.pointerType !== 'mouse' || reduzido) return

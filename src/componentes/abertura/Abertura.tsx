@@ -57,7 +57,7 @@ export default function Abertura({ modo, onSaida, onFim }: Props) {
       document.fonts?.load('italic 400 64px "Bodoni Moda"') ?? Promise.resolve(),
       document.fonts?.load('600 16px Manrope') ?? Promise.resolve(),
       img(LOGO),
-      img(foto(1).src),
+      img(foto(10).src),
     ]
     let feitas = 0
     let progresso = 0

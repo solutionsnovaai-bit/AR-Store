@@ -25,7 +25,7 @@
 
 .hero-visual { position: relative; justify-self: end; width: min(100%, 580px); margin-right: calc(var(--margem) * -.35); }
 .hero-moldura { position: relative; }
-.hero-arco { aspect-ratio: 936 / 1038; box-shadow: 0 60px 120px -50px rgb(59 34 38 / .6); }
+.hero-arco { aspect-ratio: 3 / 4; box-shadow: 0 60px 120px -50px rgb(59 34 38 / .6); }
 .hero-arco::before { content: ''; position: absolute; inset: 55% 0 0; z-index: 1; background: linear-gradient(transparent, rgb(42 23 28 / .62)); pointer-events: none; }
 .hero-legenda { position: absolute; left: 22%; bottom: 8%; z-index: 3; display: grid; color: var(--creme); line-height: 1.1; pointer-events: none; }
 .hero-legenda span { font-size: .68rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; opacity: .85; }
