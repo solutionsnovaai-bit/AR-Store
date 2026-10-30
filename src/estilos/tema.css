@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/fonts/bodoni-moda-latin.woff2') format('woff2-variations'), url('/fonts/bodoni-moda-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/fonts/bodoni-moda-latin-italic.woff2') format('woff2-variations'), url('/fonts/bodoni-moda-latin-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('/fonts/manrope-latin.woff2') format('woff2');
+}
+
+:root {
+  /* Paleta: rosa pó da marca, rose gold (laca) e ameixa. */
+  --porcelana: #fbf3f1;
+  --seda: #f6e3e1;
+  --nude: #efd3d0;
+  --rosa: #f3c5cb;
+  --rosa-claro: #f9dfe2;
+  --laca: #b2675a;
+  --laca-escura: #8c4a3f;
+  --lilas: #d9a6b3;
+  --ouro: #c9937f;
+  --ameixa: #3b2226;
+  --ameixa-2: #5a3238;
+  --noite: #2a171c;
+  --creme: #fff7f5;
+  --tinta-suave: rgb(59 34 38 / .66);
+  --linha: rgb(59 34 38 / .14);
+  --linha-clara: rgb(255 247 245 / .16);
+
+  --serifa: 'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --topo-h: 76px;
+  --margem: clamp(20px, 4.4vw, 72px);
+  --largura: 1440px;
+  --raio: 22px;
+  --arco: 999px 999px 26px 26px;
+  --ease-expo: cubic-bezier(.16, 1, .3, 1);
+  --ease-quint: cubic-bezier(.83, 0, .17, 1);
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+}
+
+@media (max-width: 767px) {
+  :root { --topo-h: 64px; --raio: 18px; }
+}

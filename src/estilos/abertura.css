@@ -1,0 +1,43 @@
+/* Abertura: o logo se formando */
+.abertura { position: fixed; inset: 0; z-index: 100; pointer-events: auto; }
+.abertura.is-saindo { pointer-events: none; }
+.ab-fundo { position: absolute; inset: 0; background: radial-gradient(70% 60% at 50% 42%, #fde6e5 0%, #f8d0cf 62%, #efbcbc 100%); }
+.abertura.is-saindo .ab-fundo { display: none; }
+
+.ab-palco { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 14px; transform-origin: 50% 46%; }
+.ab-logo { --rev: -14%; --desfoque: 6px; position: relative; width: min(78vw, 520px, 62svh); aspect-ratio: 1046 / 734; }
+.ab-logo img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ab-logo-sombra { opacity: .13; filter: blur(1.5px) grayscale(.4); }
+.ab-logo-forma {
+  position: absolute; inset: 0; overflow: hidden; filter: blur(var(--desfoque));
+  -webkit-mask-image: linear-gradient(105deg, #000 calc(var(--rev) - 12%), transparent calc(var(--rev) + 12%));
+  mask-image: linear-gradient(105deg, #000 calc(var(--rev) - 12%), transparent calc(var(--rev) + 12%));
+}
+.ab-luz {
+  position: absolute; inset: -10% auto -10% 0; width: 38%; transform: translateX(-130%);
+  background: linear-gradient(100deg, transparent 20%, rgb(255 255 255 / .85) 50%, transparent 80%); mix-blend-mode: overlay;
+  -webkit-mask-image: url('/marca/logo-ar.webp'); mask-image: url('/marca/logo-ar.webp');
+}
+.ab-estrela { position: absolute; width: 9%; aspect-ratio: 1; translate: -50% -50%; opacity: 0; color: #fff; filter: drop-shadow(0 0 12px rgb(255 255 255 / .9)); }
+.ab-estrela .brilho { width: 100%; height: 100%; }
+.ab-contador { margin-top: 6px; font-family: var(--serifa); font-size: clamp(1.8rem, 3.6vw, 2.5rem); line-height: 1; color: var(--laca); font-variant-numeric: tabular-nums lining-nums; letter-spacing: .02em; opacity: 0; }
+.ab-contador small { font-family: var(--sans); font-size: .4em; margin-left: 4px; vertical-align: top; }
+.ab-legenda { font-size: .7rem; font-weight: 700; letter-spacing: .32em; text-transform: uppercase; color: rgb(59 34 38 / .55); opacity: 0; }
+
+.ab-cortina { position: absolute; inset: 0; background: radial-gradient(70% 60% at 50% 40%, #c9837a 0%, var(--laca) 55%, var(--laca-escura) 100%); }
+
+.ab-voo { position: fixed; left: 0; top: 0; z-index: 2; transform-origin: 0 0; pointer-events: none; }
+.ab-marca { transform-origin: 0 0; color: var(--creme); font-size: clamp(1.6rem, 5.4vw, 4.8rem); }
+.ab-marca .marca-e { color: var(--creme); }
+.ab-marca .marca-l { opacity: 0; }
+
+.ab-pular {
+  position: absolute; right: var(--margem); bottom: max(22px, env(safe-area-inset-bottom)); z-index: 3;
+  padding: 10px 2px; border-bottom: 1px solid rgb(59 34 38 / .3);
+  font-size: .72rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: rgb(59 34 38 / .65);
+  transition: color .3s, border-color .3s;
+}
+.ab-pular:hover { color: var(--ameixa); border-color: var(--ameixa); }
+.abertura.is-saindo .ab-pular { opacity: 0; }
+
+.site.is-abrindo { pointer-events: none; }
